@@ -1,0 +1,67 @@
+/* src/components/ArticleDetailPage.css */
+
+/* ... (Existing styles for .article-detail-page, h1, etc.) ... */
+
+.article-detail-page {
+    /* Existing styles for centering and width */
+    max-width: 900px;
+    margin: 40px auto; /* This centers the whole page content block */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+
+    /* ADD THIS for flexbox layout on the container if the button is the *only* item
+       in its line that you want to push right, or if you want to control other items.
+       However, for a single button that needs to be on its own line and right-aligned,
+       margin-left: auto on the button itself is cleaner.
+    */
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    /* flex-wrap: wrap; If other content comes after it on the same "line" */
+}
+
+
+.back-button {
+    /* Existing Basic Styling */
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+
+    /* --- ADD THIS LINE TO ALIGN TO THE RIGHT --- */
+    margin-left: auto; /* Pushes the button to the far right of its container */
+    display: block; /* Make it a block-level element so margin-left: auto works properly */
+    /* OR if you want it inline with other items and push them to the right, keep display: inline-flex
+       and make the parent container (article-detail-page) a flex container with justify-content: flex-end;
+       But based on common usage, it's usually on its own line.
+    */
+}
+
+.back-button:hover {
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.back-button:active {
+    background-color: beige;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+/* ... (other styles like .outline, responsive adjustments) ... */

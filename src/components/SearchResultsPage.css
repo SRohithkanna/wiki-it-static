@@ -1,0 +1,21 @@
+/* src/components/SearchResultsPage.css */
+
+/* ... (existing styles) ... */
+
+.clear-search-button {
+    background-color: #f0ad4e; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: -10px; /* Adjust vertical positioning */
+    margin-bottom: 20px; /* Space below the button */
+    transition: background-color 0.2s ease-in-out;
+    display: inline-block; /* Allows it to sit nicely on the line */
+}
+
+.clear-search-button:hover {
+    background-color: #ec971f; /* Darker orange on hover */
+}

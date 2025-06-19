@@ -1,0 +1,80 @@
+/* Basic styling for the Category Detail Page container */
+.category-detail-page {
+    max-width: 900px; /* Limit the width for better readability */
+    margin: 40px auto; /* Center the content with top/bottom margin */
+    padding: 30px; /* Add some internal padding */
+    background-color: #fff; /* White background for the content area */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A clean, modern font */
+    color: #333; /* Darker text for readability */
+}
+
+/* Styling for the main heading */
+.category-detail-page h1 {
+    font-size: 2.5em; /* Larger font size for the main title */
+    color: #0056b3; /* A blue color for headings, matching typical IT themes */
+    margin-bottom: 25px; /* Space below the heading */
+    text-align: center; /* Center the heading */
+    border-bottom: 2px solid #eee; /* A subtle line under the heading */
+    padding-bottom: 15px; /* Space between heading text and the line */
+}
+
+/* Styling for paragraph text */
+.category-detail-page p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify; /* Justify text for a cleaner block */
+}
+
+/* Styling for the list of articles/options */
+.category-detail-page ul {
+    list-style: disc; /* Use standard disc bullets */
+    margin-left: 25px; /* Indent the list */
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.category-detail-page li {
+    font-size: 1.1em;
+    line-height: 1.8; /* More space between list items */
+    margin-bottom: 10px; /* Space between each list item */
+    color: #555; /* Slightly lighter text for list items */
+}
+
+/* Style for when no items are passed/displayed */
+.category-detail-page p:last-child {
+    font-style: italic;
+    color: #888;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .category-detail-page {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .category-detail-page h1 {
+        font-size: 2em;
+    }
+
+    .category-detail-page p,
+    .category-detail-page li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-detail-page {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .category-detail-page h1 {
+        font-size: 1.8em;
+    }
+}

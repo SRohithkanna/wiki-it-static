@@ -1,0 +1,72 @@
+/* Card Container Styles (for the <button> element) */
+.card {
+  /* --- Reset default button styles --- */
+  background: none;        /* Remove default button background */
+  color: inherit;          /* Inherit text color from parent */
+  border: none;            /* Remove default button border */
+  padding: 0;              /* Remove default button padding */
+  font: inherit;           /* Inherit font styles from parent */
+  cursor: pointer;         /* Change cursor to pointer to indicate clickability */
+  outline: inherit;        /* Remove the focus outline (consider accessibility, may want to keep a subtle outline) */
+  text-align: center;      /* Center text content horizontally */
+
+
+  /* --- Card specific layout and appearance --- */
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 8px;      /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 15px;            /* Space around each card */
+  padding: 20px;           /* Internal padding for content */
+  width: 280px;            /* Fixed width for cards (adjust as needed) */
+  min-height: 200px;       /* Minimum height for consistent card size */
+  
+  /* Flexbox for content alignment within the card */
+  display: flex;
+  flex-direction: column; /* Stack header and list vertically */
+  align-items: center;    /* Center items horizontally within the flex container */
+  justify-content: flex-start; /* Align content to the top */
+
+  /* Smooth transition for hover effects */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: inline-block;
+}
+
+/* Hover effect for the card */
+.card:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styles for the header (h2) inside the card */
+.card h2 {
+  font-size: 1.5em;       /* Larger font size for the header */
+  font-weight: bold;      /* Ensure the header is bold */
+  color: #333;            /* Darker text color for header */
+  margin-top: 0;          /* Remove default top margin */
+  margin-bottom: 15px;    /* Space below the header */
+  width: 100%;            /* Ensure header takes full width */
+}
+
+/* Styles for the unordered list (ul) inside the card */
+.card ul {
+  list-style-type: none;  /* Remove bullet points */
+  padding: 0;             /* Remove default left padding */
+  margin: 0;              /* Remove default margin */
+  width: 100%;            /* Ensure list takes full width */
+}
+
+/* Styles for list items (li) inside the card */
+.card ul li {
+  font-size: 1em;         /* Standard font size for list items */
+  color: #555;            /* Medium grey text color */
+  margin-bottom: 8px;     /* Space between list items */
+  line-height: 1.4;       /* Improve readability */
+}
+
+/* Remove the <br> tags' effect, as margins handle spacing better */
+/* While <br> tags are used in your JSX, for better control and
+   semantic HTML, it's generally better to use CSS margins/padding
+   between list items instead of <br>. This rule helps mitigate their effect. */
+.card ul li br {
+    display: none;
+}
